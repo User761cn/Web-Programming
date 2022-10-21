@@ -1,0 +1,55 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/video/video",
+    "pages/miniVideo/miniVideo",
+    "pages/Show/Show",
+    "pages/First/First",
+    "pages/detail/detail"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#E54847",
+    "navigationBarTitleText": "猫眼电影",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+      "backgroundColor": "fff",
+      "color": "696969",
+      "selectedColor": "#E54847",
+    "list": [
+        {
+          "pagePath": "pages/index/index",
+          "text": "主页",
+          "iconPath": "/pages/Icon/主页面.png",
+          "selectedIconPath": "/pages/Icon/主页面 (1).png"
+          
+        },{
+          "pagePath": "pages/video/video",
+          "text": "视频",
+          "iconPath": "/pages/Icon/video.png",
+          "selectedIconPath": "pages/Icon/video-active.png"
+          
+        },{
+          "pagePath": "pages/miniVideo/miniVideo",
+          "text": "小视频",
+          "iconPath": "/pages/Icon/videoplay.png",
+          "selectedIconPath": "pages/Icon/video-play-active.png"
+          
+        },{
+        "pagePath": "pages/Show/Show",
+        "text": "演出",
+        "iconPath": "/pages/Icon/show.png",
+        "selectedIconPath": "pages/Icon/show-active.png"
+        
+        },{
+        "pagePath": "pages/First/First",
+        "text": "我的",
+        "iconPath": "/pages/Icon/my.png",
+        "selectedIconPath": "pages/Icon/my-active.png"
+        
+        }]
+},
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

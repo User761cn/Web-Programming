@@ -1,0 +1,121 @@
+.swiper-container{
+    height: 500rpx;
+}
+.swiper-container image{
+    width: 100%;
+}
+.Tab{
+    display: flex;/*子标签从垂直排列变更为水平排列*/
+    width: 100%;/*设置宽度为整屏宽*/
+    height: 60rpx;/*view高50rpx*/
+    line-height: 50rpx;/*文字行高50rpx*/
+    border-bottom: 1px solid #e6e6e6;/*设置浅色下边框 1px 实线(solid) 点线（dotted）*/
+}
+.Tab view{
+    flex: 1;/*设置子标签 1:1平分*/
+    text-align: center;/*文本居中*/
+}
+.Tab button{
+    height: 50rpx;
+    font-size: medium;
+}
+.active{
+    color: #e54847;
+}
+.GreatMovie{
+    width: 100%;
+    padding: 10px;/*上下左右的间距*/
+}
+.title{
+    color: #333;
+    font-size: 28rpx;/*字体大小*/
+    margin-bottom: 20rpx;
+}
+.scroll-box {
+    white-space: nowrap;
+    width: 100%;
+}
+.scroll-item{
+    display: inline-block;/*变为纵向排列*/
+    margin-right: 10px;
+}
+.scroll-item image{
+    width: 85px;
+    
+}
+.film-name{
+    font-size: 26rpx;
+    width: 85px;
+    color: #222;
+    margin: 6rpx 0; /*上下间距是6rpx  左右没间距*/
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;/*超出边框的内容隐藏*/
+}
+.specialpicture{/*新神榜本身图片高度有问题，将这个图片外面加一个view，设置对应的行高和overflow隐藏样式*/
+    height: 115px;
+    overflow: hidden;
+}
+.main{
+    border-top: 10px solid #f6f6f6;
+  }
+  
+  .film-main-box{
+    display: flex;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+  }
+  .film-left{
+    flex: 1;  /*左边一份*/
+  }
+  .film-right{
+    flex: 4; /*右边4份*/
+    border-bottom: 1px solid #F0F0F0;
+    display: flex;/*纵向布局*/
+  }
+  .right-l{/*将right-l和right-r平均分成3份，right-l占两份*/
+           /*以实现电影名和按钮的合理距离*/
+    flex: 2;
+  }
+  .right-r{
+    flex: 1;
+  }
+  .film-main-box image{
+    width: 64px;
+  }
+.nm{
+    font-size: 17px;
+    font-weight: 700;
+}
+.mk{
+    margin-top: 5px;
+    font-size: 13px;/*距离上方有5px的间距*/
+    color: #666;
+}
+.mk text{
+    font-size: 16px;
+    color: #faaf00;
+}
+.desc{
+    font-size: 13px;
+    margin-top: 5px;
+    color: #666;
+}
+.showInfo{
+    font-size: 13px;
+    margin-top: 5px;
+    color: #666;
+}
+.buy{
+    background-color: rgb(240,61,55);/*背景颜色*/
+    color: white;/*文字颜色*/
+    width: 54px !important; /*按钮的整个宽度 小程序自带按钮样式，自己写的样式要覆盖小程序自带的按钮样式
+    !important表示优先级最高*/
+    height: 28px !important;/*按钮的高度*/
+    font-size: 13px !important;
+    font-weight: 400 !important;
+    padding: 0% !important;/*文字和按钮的间距，小程序自带14px*/
+    line-height: 28px;/*文字行高*/
+    border-radius: 80px;/*方框圆角*/
+}

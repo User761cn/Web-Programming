@@ -1,0 +1,63 @@
+<view class="top01" >
+    <swiper class="swiper-container" indicator-dots="true" autoplay interval="3000" circular>
+    <swiper-item>
+    <image src="/pages/Picture/movie.jpg" mode="widthFix"></image>
+    </swiper-item>
+    <swiper-item>
+    <image src="/pages/Picture/2.png" mode="widthFix"></image>
+    </swiper-item>
+    <swiper-item>
+    <image src="/pages/Picture/3.jpg" mode="widthFix"></image>
+    </swiper-item>
+    </swiper>
+    <view class="Tab"> 
+    <!--这样每个view单独设置传参属性比加入button，js中设置五个方法更改num更便捷-->
+      <view data-num="1" bindtap="changeNum" class="{{num == 1 ? 'active' : ''}}">热映</view>
+      <view data-num="2" bindtap="changeNum" class="{{num == 2 ? 'active' : ''}}">影院</view>
+      <view data-num="3" bindtap="changeNum" class="{{num == 3 ? 'active' : ''}}">待映</view>
+      <view data-num="4" bindtap="changeNum" class="{{num == 4 ? 'active' : ''}}">经典</view>
+      <view data-num="5" bindtap="changeNum" class="{{num == 5 ? 'active' : ''}}">小剧场</view>
+    </view>
+    <!--利用wx:if提前指定一个规则，
+    有一个数据是num，num是1，就显示第一个 num是2，就显示第二个
+    点击热映，让num = 1 点击影院，让num = 2-->
+    <view wx:if="{{num == 1}}">
+    <view class="GreatMovie">
+      <view class="title">最受好评电影</view>
+      <scroll-view class="scroll-box" scroll-x="{{true}}">
+        <view class="scroll-item" wx:for="{{list}}">
+            <view class="specialpicture">
+         <image src="{{item.img}}" mode="widthFix"></image>
+            </view>
+          <view class="film-name">{{item.nm}}</view>
+        </view>
+      </scroll-view>
+    </view>
+    <view class="main">
+        <view class="film-main-box" wx:for="{{list}}" wx:key="id" bindtap="toDetail">
+            <view class="film-left">
+                <image src="{{item.img}}" mode="widthFix"></image>
+            </view>
+            <view class="film-right">
+                <view class="right-l">
+                    <view class="nm">{{item.nm}}</view>
+                    <view class="mk">观众评<text>{{item.mk}}</text></view>
+                    <view class="desc">{{item.desc}}</view>
+                    <view class="showInfo">{{item.showInfo}}</view>
+                </view>
+                <view class="right-r">
+                    <button class="buy">购票</button>
+                </view>
+            </view>
+        </view>
+    </view>
+  </view>
+  <view wx:if="{{num == 2}}">2</view>
+  <view wx:if="{{num == 3}}">3</view>
+  <view wx:if="{{num == 4}}">4</view>
+  <view wx:if="{{num == 5}}">5</view>
+</view>
+<!--
+    wx:for批量渲染数据
+    index 第几个数据
+-->
